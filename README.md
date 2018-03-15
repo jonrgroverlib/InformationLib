@@ -40,7 +40,7 @@ Data (but avoid Xml), DataModels, Endemes (but avoid Tree), HardData, SoftData (
 and Testing (but avoid TestJson). I have confidence that the core each of these namespaces works well. SoftData avoids excpetions
 and HardData throws exceptions. The more problematic namespaces are Generator, InfoAccess, Micro, Vertical, Winform.
 
-AS A .NET PROJECT
+INSTALLATION
 The library is designed to work with .NET as a 'leaf' project libaray. In other words it is brought into a .NET solution just like any
 other project, and it has no dependencies on any other projects external to the 'system.' namespace. There is a small amount of linq
 in the project which you will have to remove or rewrite if you want to use this project with a very old version of .NET or C#. The
