@@ -1,0 +1,251 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{F64A2901-A29B-4616-9FFF-B737A5D93394}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>InformationLib</RootNamespace>
+    <AssemblyName>InformationLib</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Testing\Assert.cs" />
+    <Compile Include="Testing\In.cs" />
+    <Compile Include="Testing\Is.cs" />
+    <Compile Include="Testing\LpgplLicense.cs" />
+    <Compile Include="Testing\RandomSource.cs" />
+    <Compile Include="Data\Atom.cs" />
+    <Compile Include="Data\ConnectedTests.cs" />
+    <Compile Include="Data\EndemeAccess.cs" />
+    <Compile Include="DataModels\EndemeIndex.cs" />
+    <Compile Include="DataModels\EndemeLarge.cs" />
+    <Compile Include="DataModels\EndemeProfileTable.cs" />
+    <Compile Include="DataModels\EndemeTable.cs" />
+    <Compile Include="Data\PrivateMember.cs" />
+    <Compile Include="Endemes\InfoAspect.cs" />
+    <Compile Include="Endemes\AspectTests.cs" />
+    <Compile Include="Endemes\EndemeActuator.cs" />
+    <Compile Include="Endemes\EndemeDefinition.cs" />
+    <Compile Include="Endemes\EndemeObject.cs" />
+    <Compile Include="Endemes\EndemeProfile.cs" />
+    <Compile Include="Endemes\EndemeTests.cs" />
+    <Compile Include="Endemes\EndemeValue.cs" />
+    <Compile Include="Endemes\GenEndemeItem_doNotUse.cs" />
+    <Compile Include="Endemes\GenEndemeList_doNotUse.cs" />
+    <Compile Include="Endemes\IEndemeItem.cs" />
+    <Compile Include="HardData\HardDataTests.cs" />
+    <Compile Include="Micro\Array2dChar.cs" />
+    <Compile Include="Data\Throws.cs" />
+    <Compile Include="Data\InformationException.cs" />
+    <Compile Include="Micro\Array2dEndeme.cs" />
+    <Compile Include="Endemes\EndemeTextFormat.cs" />
+    <Compile Include="HardData\ConnectSource.cs" />
+    <Compile Include="Data\DataAccessTests.cs" />
+    <Compile Include="Data\DataTableSpec.cs" />
+    <Compile Include="Data\DataTests.cs" />
+    <Compile Include="Endemes\EndemeReference.cs" />
+    <Compile Include="Endemes\EndemeField.cs" />
+    <Compile Include="Generator\AbstractXmlGenerator.cs" />
+    <Compile Include="Generator\DbLabels.cs" />
+    <Compile Include="Generator\EndemeXmlGenerator.cs" />
+    <Compile Include="Generator\IGeneratorResults.cs" />
+    <Compile Include="Generator\NodeCreationCommand.cs" />
+    <Compile Include="Generator\Roll.cs" />
+    <Compile Include="Generator\_gen_.cs" />
+    <Compile Include="HardData\FilesIO.cs" />
+    <Compile Include="Data\FileNameSpace.cs" />
+    <Compile Include="Data\IXmlArrayWrapper.cs" />
+    <Compile Include="Data\PathSet.cs" />
+    <Compile Include="Data\PathSlicer.cs" />
+    <Compile Include="Data\RichDataTable.cs" />
+    <Compile Include="Data\RichSqlCommand.cs" />
+    <Compile Include="Data\RichXmlDocument.cs" />
+    <Compile Include="Data\RichXmlNode.cs" />
+    <Compile Include="Data\RichXmlSchemaSet.cs" />
+    <Compile Include="Data\SimpleSchema.cs" />
+    <Compile Include="Data\Tally.cs" />
+    <Compile Include="Data\Validator.cs" />
+    <Compile Include="Data\XmlTests.cs" />
+    <Compile Include="HardData\AmbiguousResultException.cs" />
+    <Compile Include="HardData\CsvFile.cs" />
+    <Compile Include="HardData\DataReaderAdapter.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="HardData\InData.cs" />
+    <Compile Include="HardData\KeyListFile.cs" />
+    <Compile Include="Endemes\Endeme.cs" />
+    <Compile Include="Endemes\EndemeBalancer.cs" />
+    <Compile Include="Endemes\EndemeCharacteristic.cs" />
+    <Compile Include="Endemes\EndemeGrabBag.cs" />
+    <Compile Include="Endemes\EndemeItem.cs" />
+    <Compile Include="Endemes\EndemeList.cs" />
+    <Compile Include="Endemes\EndemeMeaning.cs" />
+    <Compile Include="Endemes\EndemeQuantification.cs" />
+    <Compile Include="Endemes\EndemeSet.cs" />
+    <Compile Include="Micro\TimeLength.cs" />
+    <Compile Include="SoftData\ISoft.cs" />
+    <Compile Include="SoftData\Soft.cs" />
+    <Compile Include="SoftData\SoftDataTests.cs" />
+    <Compile Include="SoftData\SoftDecimal.cs" />
+    <Compile Include="SoftData\SoftDouble.cs" />
+    <Compile Include="SoftData\SoftInt.cs" />
+    <Compile Include="SoftData\SoftString.cs" />
+    <Compile Include="Strings\GuiAction.cs" />
+    <Compile Include="Strings\GuiActionTrace.cs" />
+    <Compile Include="Strings\StringTests.cs" />
+    <Compile Include="Testing\ReflectorTests.cs" />
+    <Compile Include="Testing\TestJson.cs" />
+    <Compile Include="Vertical\EtlModule.cs" />
+    <Compile Include="Vertical\EtlTests.cs" />
+    <Compile Include="Vertical\ExtractField.cs" />
+    <Compile Include="Vertical\ImportDalCommon.cs" />
+    <Compile Include="Vertical\ImportFile.cs" />
+    <Compile Include="Vertical\ImportMapField.cs" />
+    <Compile Include="Vertical\LoadField.cs" />
+    <Compile Include="Vertical\MirrorField.cs" />
+    <Compile Include="Vertical\NumericLookup.cs" />
+    <Compile Include="Vertical\ParameterizedLocation.cs" />
+    <Compile Include="Vertical\StatusError.cs" />
+    <Compile Include="Vertical\StringLookup.cs" />
+    <Compile Include="Vertical\TransformField.cs" />
+    <Compile Include="Vertical\Xref.cs" />
+    <Compile Include="SoftData\FuzzyItem.cs" />
+    <Compile Include="SoftData\FuzzyList.cs" />
+    <Compile Include="SoftData\FuzzyMeasure.cs" />
+    <Compile Include="SoftData\FuzzyTerm.cs" />
+    <Compile Include="InfoAccess\ClassInfo.cs" />
+    <Compile Include="Data\EndemeTableFactory_old.cs" />
+    <Compile Include="Endemes\Tree\EndemeHierarchy.cs" />
+    <Compile Include="Endemes\Tree\EndemeUnit.cs" />
+    <Compile Include="Endemes\Tree\EndemeNode.cs" />
+    <Compile Include="InfoAccess\InfoAccessTests.cs" />
+    <Compile Include="Endemes\Tree\EndemeKey.cs" />
+    <Compile Include="InfoAccess\LibraryInfo_cs.cs" />
+    <Compile Include="InfoAccess\ClassIdeas.cs" />
+    <Compile Include="InfoAccess\ConcreteClass.cs" />
+    <Compile Include="InfoAccess\ForeignKey.cs" />
+    <Compile Include="InfoAccess\GraphEdge.cs" />
+    <Compile Include="InfoAccess\GraphMain.cs" />
+    <Compile Include="InfoAccess\GraphNode.cs" />
+    <Compile Include="InfoAccess\InheritClass.cs" />
+    <Compile Include="InfoAccess\MemberList.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SoftData\DoubleExtensions.cs" />
+    <Compile Include="SoftData\EnumList.cs" />
+    <Compile Include="SoftData\Levenshtein.cs" />
+    <Compile Include="SoftData\Range.cs" />
+    <Compile Include="SoftData\TimeDate2.cs" />
+    <Compile Include="SoftData\TimeDate_old.cs" />
+    <Compile Include="SoftData\TreatAs.cs" />
+    <Compile Include="Strings\BigNumber.cs" />
+    <Compile Include="Strings\Concatenator.cs" />
+    <Compile Include="InfoAccess\Corpus.cs" />
+    <Compile Include="Strings\DiffExtensions.cs" />
+    <Compile Include="Strings\DiffItem.cs" />
+    <Compile Include="Strings\DiffItemByFile.cs" />
+    <Compile Include="Strings\DiffItemByMethod.cs" />
+    <Compile Include="Strings\DiffList.cs" />
+    <Compile Include="Strings\DiffListLcs.cs" />
+    <Compile Include="Strings\GrayCode.cs" />
+    <Compile Include="Strings\IDiffItem.cs" />
+    <Compile Include="Strings\LargeDiff.cs" />
+    <Compile Include="Strings\LevenschteinMatrix.cs" />
+    <Compile Include="Strings\PageBuilder.cs" />
+    <Compile Include="Strings\RegexGenerator.cs" />
+    <Compile Include="Strings\RegexLogStep.cs" />
+    <Compile Include="Strings\RegexStep.cs" />
+    <Compile Include="Strings\RegexTable.cs" />
+    <Compile Include="Strings\RegexTranslate.cs" />
+    <Compile Include="Strings\Split.cs" />
+    <Compile Include="Strings\String2dArray.cs" />
+    <Compile Include="Strings\StringExtensions.cs" />
+    <Compile Include="Strings\__.cs" />
+    <Compile Include="Vertical\CommonDataRoutine.cs" />
+    <Compile Include="Winform\AppConfig.cs" />
+    <Compile Include="Winform\CommonFormRoutine.cs" />
+    <Compile Include="Vertical\CommonWebRoutine.cs" />
+    <Compile Include="Vertical\CrudModule.cs" />
+    <Compile Include="Vertical\ErrorMessages.cs" />
+    <Compile Include="Vertical\ModuleFor.cs" />
+    <Compile Include="Vertical\SetOf.cs" />
+    <Compile Include="Vertical\VerticalTests.cs" />
+    <Compile Include="Vertical\WebField.cs" />
+    <Compile Include="Winform\IListData.cs" />
+    <Compile Include="Winform\ITraceable.cs" />
+    <Compile Include="Winform\IWidgetIterator.cs" />
+    <Compile Include="Winform\ListItem.cs" />
+    <Compile Include="Winform\MDIFormInstanceLimitException.cs" />
+    <Compile Include="Winform\MyMessageBox.cs" />
+    <Compile Include="Winform\MyUI.cs" />
+    <Compile Include="Winform\Plaster.cs" />
+    <Compile Include="Winform\Scrape.cs" />
+    <Compile Include="Winform\TextBoxField.cs" />
+    <Compile Include="Winform\ThrowMessage.cs" />
+    <Compile Include="Winform\UITests.cs" />
+    <Compile Include="Winform\WidgetList.cs" />
+    <Compile Include="Winform\YesNoQuestion.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Generator\date2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Generator\endeme2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
