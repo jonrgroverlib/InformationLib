@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<xs:simpleType name="endemestring">
+		<xs:restriction base="xs:string">
+			<xs:pattern value="[A-Z]{0,26}" />
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="label">
+		<xs:restriction base="xs:string">
+			<xs:maxLength value="64" />
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="strength">
+		<xs:restriction base="xs:decimal">
+			<xs:minInclusive value="-1.0">
+			</xs:minInclusive>
+			<xs:maxInclusive value="1.0">
+			</xs:maxInclusive>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:element name="endemeset">
+		<xs:annotation>
+			<xs:documentation>
+// ----------------------------------------------------------------------------------------------100
+//  This section lists the various characteristics for the endemes listed below
+// ----------------------------------------------------------------------------------------------100
+			</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="A" type="label" />
+				<xs:element name="B" type="label" />
+				<xs:element name="C" type="label" />
+				<xs:element name="D" type="label" />
+				<xs:element name="E" type="label" />
+				<xs:element name="F" type="label" />
+				<xs:element name="G" type="label" />
+				<xs:element name="H" type="label" />
+				<xs:element name="I" type="label" />
+				<xs:element name="J" type="label" minOccurs="0" />
+				<xs:element name="K" type="label" minOccurs="0" />
+				<xs:element name="L" type="label" />
+				<xs:element name="M" type="label" />
+				<xs:element name="N" type="label" />
+				<xs:element name="O" type="label" />
+				<xs:element name="P" type="label" />
+				<xs:element name="Q" type="label" minOccurs="0" />
+				<xs:element name="R" type="label" />
+				<xs:element name="S" type="label" />
+				<xs:element name="T" type="label" />
+				<xs:element name="U" type="label" minOccurs="0" />
+				<xs:element name="V" type="label" minOccurs="0" />
+				<xs:element name="W" type="label" minOccurs="0" />
+				<xs:element name="X" type="label" minOccurs="0" />
+				<xs:element name="Y" type="label" minOccurs="0" />
+				<xs:element name="Z" type="label" minOccurs="0" />
+			</xs:sequence>
+			<xs:attribute name="name" type="xs:string">
+			</xs:attribute>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="endeme">
+		<xs:annotation>
+			<xs:documentation>
+// ----------------------------------------------------------------------------------------------100
+//  endeme -- This is the base type - the rest of the schema is context
+// ----------------------------------------------------------------------------------------------100
+			</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:simpleContent>
+				<xs:extension base="endemestring">
+					<xs:attribute name="key" type="label" use="required" />
+					<xs:attribute name="strength" type="strength" />
+					<xs:attribute name="calculated" type="endemestring" />
+					<xs:attribute name="strength2" type="strength" />
+				</xs:extension>
+			</xs:simpleContent>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="endemelist">
+		<xs:annotation>
+			<xs:documentation>
+// ----------------------------------------------------------------------------------------------100
+//  endemelist -- This section lists the actual endemes
+// ----------------------------------------------------------------------------------------------100
+			</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="endeme" minOccurs="0" maxOccurs="unbounded" />
+			</xs:sequence>
+			<xs:attribute name="name" type="xs:string">
+			</xs:attribute>
+		</xs:complexType>
+		<xs:unique name="check">
+			<xs:selector xpath="endeme" />
+			<xs:field xpath="key" />
+		</xs:unique>
+	</xs:element>
+	<xs:element name="endemebox">
+		<xs:annotation>
+			<xs:documentation>
+// ----------------------------------------------------------------------------------------------100
+//  endemetable -- This is the main document
+// ----------------------------------------------------------------------------------------------100
+			</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="endemeset" />
+				<xs:element ref="endemelist" minOccurs="0" maxOccurs="unbounded" />
+			</xs:sequence>
+			<xs:attribute name="name" type="xs:string" />
+		</xs:complexType>
+		<xs:unique name="uniqueLists">
+			<xs:selector xpath="endemelist" />
+			<xs:field xpath="name" />
+		</xs:unique>
+	</xs:element>
+</xs:schema>
